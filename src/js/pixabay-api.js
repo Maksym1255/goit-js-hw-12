@@ -14,10 +14,7 @@ export async function searchImj(query, page) {
     page: page,
     per_page: 12,
   });
-  try {
-    const res = await axios.get(``, { params });
-    return res.data;
-  } catch (error) {
-    console.log(error);
-  }
+
+  const res = await axios.get(``, { params });
+  return res.data;
 }
